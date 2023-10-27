@@ -9,8 +9,9 @@ def send_schedule_message(numero, message, hour, minute):
 
     pywhatkit.sendwhatmsg(numero, message, scheduling.hour, scheduling.minute + 1)
 
-# exemplo de message programada
-send_schedule_message("+55 31 99999-9999", "Essa message é automatica!", 4, 25)
+# example of schedule message (parameters: number, message, hour, minute)
+send_schedule_message("+55 31 99999-9999", "This is an automatic message!", 4, 25)
+
 
 def send_message_to_nnumbers(numbers, message):
     for numero in numbers:
@@ -25,8 +26,8 @@ def send_message_to_nnumbers(numbers, message):
 
         time.sleep(5)
 
-numbers = ["+55 99 99999-9999", "+55 31 98888-8888"]
 
-# exemplo de message encaminhada para diversos numbers
+# example of message fowarded to multiple numbers
+numbers = ["+55 99 99999-9999", "+55 31 98888-8888"]
 message = "This is an automatic message!"
 send_message_to_nnumbers(numbers, message)
